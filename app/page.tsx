@@ -40,15 +40,107 @@ useEffect(() => {
 
 
 const products = [
-  { id: 1, name: "Classic Leather Tote", price: "3000 KSH", image: "travelling bag.jpg", rating: 5 },
-  { id: 2, name: "Backpack", price: "3000 KSH", image: "/WhatsApp%20Image%202025-08-05%20at%2002.30.56_a2fecae9.jpg", rating: 5 },
-  { id: 3, name: "Crossbody Messenger", price: "2500 KSH", image: "/black-crossbody-messenger-bag-luxury-leather.jpg", rating: 4 },
-  { id: 4, name: "Designer Backpack", price: "2500 KSH", image: "/luxury-black-leather-backpack-designer-bag.jpg", rating: 5 },
-  { id: 5, name: "Mini Shoulder Bag", price: "2200 KSH", image: "/small-black-shoulder-bag-luxury-mini-handbag.jpg", rating: 4 },
-  { id: 6, name: "Travel Duffle", price: "3500 KSH", image: "/luxury-black-leather-duffle-travel-bag.jpg", rating: 5 },
-  { id: 7, name: "Hidaya Backpack", price: "2800 KSH", image: "/medium_resized_1.jpg", rating: 5 },
-  { id: 8, name: "Elsa Backpack", price: "2800 KSH", image: "/medium_resized_2.jpg", rating: 5 },
-  { id: 9, name: "Ella Rose Backpack", price: "2800 KSH", image: "/medium_resized_3.jpg", rating: 4 },
+  {
+    id: 1,
+    name: "Travelling Bag",
+    price: "3800 KSH",
+    image: "/b8.jpg",
+    rating: 5,
+    variants: [
+      { color: "Black", image: "/b8.jpg", description: "Classic leather black travel bag" },
+     
+    ],
+  },
+  {
+    id: 2,
+    name: "Backpack",
+    price: "3000 KSH",
+    image: "/WhatsApp%20Image%202025-08-05%20at%2002.30.56_a2fecae9.jpg",
+    rating: 5,
+    variants: [
+      { color: "Black", image: "/WhatsApp%20Image%202025-08-05%20at%2002.30.56_a2fecae9.jpg", description: "Modern everyday backpack" },
+      { color: "Blue", image: "/backpack-blue.jpg", description: "Trendy navy blue design" },
+    ],
+  },
+  {
+    id: 3,
+    name: "Crossbody Messenger",
+    price: "2700 KSH",
+    image: "/test1.jpg",
+    rating: 4,
+    variants: [
+      { color: "Black", image: "/test1.jpg", description: "Sleek black messenger bag" },
+      { color: "Brown", image: "/test2.jpg", description: "Casual brown leather finish" },
+    ],
+  },
+  {
+    id: 4,
+    name: " Backpack",
+    price: "2200 KSH",
+    image: "/b7.jpg",
+    rating: 5,
+    variants: [
+      { color: "Black", image: "/luxury-black-leather-backpack-designer-bag.jpg", description: "Elegant luxury design" },
+      { color: "Grey", image: "/designer-grey-backpack.jpg", description: "Premium grey tone look" },
+    ],
+  },
+  {
+    id: 5,
+    name: "Backpack",
+    price: "2200 KSH",
+    image: "/b9.jpg",
+    rating: 5,
+    variants: [
+      { color: "Black", image: "/small-black-shoulder-bag-luxury-mini-handbag.jpg", description: "Compact black mini handbag" },
+      { color: "Red", image: "/mini-red-shoulder-bag.jpg", description: "This is size 13 for kids of 4years old" },
+    ],
+  },
+  {
+    id: 6,
+    name: "Backpack",
+    price: "3500 KSH",
+    image: "/b10.jpg",
+    rating: 5,
+    variants: [
+      { color: "Black", image: "/luxury-black-leather-duffle-travel-bag.jpg", description: "Spacious luxury duffle" },
+      { color: "Brown", image: "/duffle-brown.jpg", description: "Warm brown leather finish" },
+    ],
+  },
+  {
+    id: 7,
+    name: "Hidaya Backpack",
+    price: "2800 KSH",
+    image: "/medium_resized_1.jpg",
+    rating: 5,
+    variants: [
+      { color: "Black", image: "/medium_resized_1.jpg", description: "Simple and stylish everyday bag" },
+      { color: "Pink", image: "/medium_resized_1-pink.jpg", description: "Elegant pink edition" },
+    ],
+  },
+  {
+    id: 8,
+    name: "Elsa Backpack",
+    price: "2800 KSH",
+    image: "/medium_resized_2.jpg",
+    rating: 5,
+    variants: [
+      { color: "Grey", image: "/medium_resized_2.jpg", description: "Light grey stylish bag" },
+      { color: "White", image: "/medium_resized_2-white.jpg", description: "Soft white tone" },
+    ],
+  },
+  {
+    id: 9,
+    name: "Ella Rose Backpack",
+    price: "2800 KSH",
+    image: "/medium_resized_3.jpg",
+    rating: 4,
+    variants: [
+      { color: "Rose", image: "/medium_resized_3.jpg", description: "Elegant rose finish" },
+      { color: "Black", image: "/medium_resized_3-black.jpg", description: "Classic black variant" },
+    ],
+  },
+
+
 
   // 🔽 New Products (just update name + image + price if needed)
   { id: 10, name: "Pink backpack", price: "2999 KSH", image: "Pink backpack.jpg", rating: 5 },
@@ -56,6 +148,12 @@ const products = [
   { id: 12, name: "Bella backpack", price: "2999 KSH", image: "Bella backpack.jpg", rating: 4 },
   { id: 13, name: "Backpack", price: "2999 KSH", image: "Back pack.jpg", rating: 5 },
   { id: 14, name: "Laptop Backpack", price: "2800 KSH", image: "Laptop backpack.jpg", rating: 4 },
+  { id: 15, name: "Barmie Backpack", price: "2500 KSH", image: "B1.jpg", rating: 4 },
+  { id: 16, name: "Waist bag", price: "1000 KSH", image: "B2.jpg", rating: 4 },
+  { id: 17, name: "sling bag", price: "1200 KSH", image: "B3.jpg", rating: 4 },
+  { id: 18, name: "Sandstorm kenya pull up leather", price: "1800 KSH", image: "B4.jpg", rating: 4 },
+  { id: 19, name: " Backpack", price: "2800 KSH", image: "b5.jpg", rating: 4 },
+  { id: 20, name: "Lunch bag", price: "1500 KSH", image: "b6.jpg", rating: 4 },
 ];
 
 
@@ -68,11 +166,20 @@ const products = [
       rating: 5,
       variants: [
         {
-          color: "All colours available",
+          color: "White",
           image: "/Air Jordan J4.jpg",
           description: "Best for outfits",
         },
-        
+        {
+          color: "Red",
+          image: "/Air Jordan J5.jpg",
+          description: "Best for outfits",
+        },
+        {
+          color: "Grey",
+          image: "/Air Jordan J6.jpg",
+          description: "Best for outfits",
+        },
       ],
     },
     {
@@ -135,22 +242,25 @@ const products = [
       id: 5,
       name: "Nike shoes",
       price: "4200 KSH",
-      image: "/designer-boots.jpg",
+      image: "/a4.jpg",
       rating: 5,
       variants: [
-        { color: "Black", image: "/designer-boots.jpg", description: "Sophisticated black leather" },
+        { color: "Black", image: "/a4.jpg", description: "Sophisticated black leather" },
+        { color: "White", image: "/a5.jpg", description: "Sophisticated white leather" },
+        { color: "Brown", image: "/a6.jpg", description: "Sophisticated brown leather" },
       ],
     }
     ,
     {
       id: 6,
-      name: "nike shoes black",
+      name: "nike shoes",
       price: "4400 KSH",
       image: "nicky shoes black.jpg",
       rating: 4,
       variants: [
-        { color: "Black", image: "nicky shoes black.jpg", description: "Versatile black straps" },
-        { color: "Brown", image: "nicky shoes black.jpg", description: "Natural brown leather" },
+        { color: "white", image: "a1.jpg", description: "Versatile black straps" },
+        { color: "Black", image: "a3.jpg", description: "Natural brown leather" },
+        { color: "Brown", image: "a2.jpg", description: "Natural brown leather" },
       ],
     }, 
     {
@@ -162,6 +272,29 @@ const products = [
       variants: [
         { color: "Black", image: "official shoes.jpg", description: "Versatile black straps" },
         { color: "Brown", image: "official shoes.jpg", description: "Natural brown leather" },
+      ],
+    },
+    {
+      id: 8,
+      name: "Glitter stilettos",
+      price: "4000 KSH",
+      image: "p2.jpg",
+      rating: 4,
+      variants: [
+        { color: "Black", image: "p2.jpg", description: "Versatile black straps" },
+        { color: "Brown", image: "p3.jpg", description: "Natural brown leather" },
+      ],
+    }, 
+    {
+      id: 9,
+      name: "air forces",
+      price: "4500 KSH",
+      image: "Air force.jpg",
+      rating: 4,
+      variants: [
+        { color: "green", image: "Air Force.jpg", description: "Versatile green straps" },
+        { color: "red", image: "Air Force c.jpg", description: "Versatile red straps" },
+        { color: "brown", image: "Air Force d.jpg", description: "Natural brown leather" },
       ],
     },
   ];
